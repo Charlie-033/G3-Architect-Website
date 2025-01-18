@@ -115,7 +115,7 @@ main{
 /* section four styles */
 .four{
     margin-top: 8rem;
-    margin-left: 3rem;
+    /* margin-left: 3rem; */
 }
 .fact-cards{
     display: grid;
@@ -127,7 +127,7 @@ main{
     align-items: center;
     text-align: center;
     border: 2px solid #FF900E;
-    border-radius: 8px;
+    border-radius: 0.5rem;
     height: 12rem;
     width: 12rem;
 }
@@ -135,10 +135,11 @@ main{
     font-size: 2.5rem;
 }
 .fact-description{
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    line-height: 1.3rem;
     max-width: 40%;
     margin-top: 1.4rem;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
 }
 .fact-num{
     font-size: 2.5rem;
@@ -146,21 +147,56 @@ main{
 .fact-name{
     font-size: 1rem;
 }
+/* section five styles */
+.sponsor{
+    margin: 8rem auto;
+}
+.sponsor-info{
+    max-width: 40%;
+    margin: 0rem auto;
+    text-align: center;
+}
+.sponsor-title{
+    font-size: 2.5rem;
+}
+.sponsor-description{
+    font-size: 0.9rem;
+    margin-top: 1.2rem;
+    margin-bottom: 3rem;
+}
+.sponsor-logo{
+    display: flex;
+    justify-content: space-between;
+}
+.sponsor-logo > img{
+    filter:grayscale(80%);
+}
 
 /* Responsive media query for mobiles */
 @media screen and (max-width: 576px){
-    .navbar, .two{
+    .navbar, .two, .sponsor-logo{
         flex-direction: column;
     }
-    .banner-content, .navbar, .features, .two{
+    .banner-content, .navbar, .features, .two, .fact-description, .sponsor-info{
         max-width: 100%;
     }
-    .team-img-container{
+    .team-img-container, .fact-cards{
         grid-template-columns: repeat(1,1fr);
     }
     .two, .features{
         margin-left: 0rem;
     }
+    .fact-cards{
+        justify-items: center;
+    }
+    .sponsor-logo > img{
+        max-width: 30%;
+    }
+    .sponsor-logo{
+        align-items: center;
+        gap: 20px;
+    }
+    
 }
 /* Responsive media query for tablets */
 @media screen and (min-width:576.1px) and (max-width:1024px){
@@ -168,7 +204,21 @@ main{
         flex-direction: column;
     }
     .features{
-        max-width: 70%;
+        max-width: 95%;
         margin: 30px auto;
+    }
+    .team-img-container > img{
+        max-width: 100%;
+    }
+    .fact-cards {
+        grid-template-columns: repeat(3, 1fr);
+        
+    }
+    .fact-description, .sponsor-info{
+        max-width: 80%;
+    }
+    .sponsor-logo{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
     }
 }
