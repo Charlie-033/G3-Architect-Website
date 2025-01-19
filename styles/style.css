@@ -116,13 +116,50 @@ main{
 .three{
     display: flex;
     margin-top: 10rem;
-    gap: 8rem;
+    gap: 7rem;
 }
 .middle{
-    max-width: 50%;
+    max-width: 45%;
+    margin-top: 2.5rem;
 }
-.middle-image{
-    max-width: 100%;
+.middle-title{
+    border-left: 5px solid #FF900E;
+    padding-left: 1rem;
+    font-size: 2.5rem;
+}
+.middle-description{
+    font-size: 0.85rem;
+    line-height: 1.2rem;
+    margin-top: 1.2rem;
+    margin-bottom: 2rem;
+}
+.mid-heading{
+    font-size: 1.1rem;
+}
+.mid-description{
+    font-size: 0.85rem;
+    line-height: 1.2rem;
+}
+.div-1, .div-2, .div-3, .div-4{
+    padding: 2rem 2.0rem;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
+    margin-bottom: 1.5rem;
+    border-radius: 0.5rem;
+}
+.middle-image>img{
+   max-width: 100%;
+}
+#Experience{
+    padding: 2.5rem 2rem;
+    margin-left: -80px;
+    margin-top: -100px;
+}
+#one{
+    font-size: 3rem;
+    font-weight: 700;
+}
+#two{
+    font-size: 1.5rem;
 }
 /* section four styles */
 .four{
