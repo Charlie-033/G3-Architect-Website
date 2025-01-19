@@ -146,9 +146,6 @@ main{
     margin-bottom: 1.5rem;
     border-radius: 0.5rem;
 }
-.middle-image>img{
-   max-width: 100%;
-}
 #Experience{
     padding: 2.5rem 2rem;
     margin-left: -80px;
@@ -233,10 +230,10 @@ footer{
 
 /* Responsive media query for mobiles */
 @media screen and (max-width: 576px){
-    .navbar, .two, .sponsor-logo{
+    .navbar, .two, .sponsor-logo, .three{
         flex-direction: column;
     }
-    .banner-content, .navbar, .features, .two, .fact-description, .sponsor-info{
+    .banner-content, .navbar, .features, .two, .fact-description, .sponsor-info, .middle, .middle-image>img{
         max-width: 100%;
     }
     .team-img-container, .fact-cards{
@@ -244,6 +241,12 @@ footer{
     }
     .two, .features{
         margin-left: 0rem;
+    }
+    #Experience{
+        max-width: 60%;
+        /* margin-top: 1.0rem; */
+        margin-left: 2.0rem;
+        padding: 1rem 1rem;
     }
     .fact-cards{
         justify-items: center;
@@ -262,7 +265,7 @@ footer{
 }
 /* Responsive media query for tablets */
 @media screen and (min-width:576.1px) and (max-width:1024px){
-    .two{
+    .two, .three{
         flex-direction: column;
     }
     .features{
@@ -272,8 +275,17 @@ footer{
     .team-img-container > img{
         max-width: 100%;
     }
+    #Experience{
+        max-width: 80%;
+        /* margin-top: 1.0rem; */
+        margin-left: 2.0rem;
+        padding:2rem 2rem ;
+    }
+    .middle{
+        max-width: 100%;
+    }
     .fact-cards {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         
     }
     .fact-description, .sponsor-info{
